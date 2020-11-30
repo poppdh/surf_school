@@ -8,26 +8,19 @@
 <body>
 	<p>asdfasdf</p>
 	<script>
-    $('body').click(function(){
-	    
-	    
-	$.ajax({
-    type: "GET",
-    url: "https://script.google.com/macros/s/AKfycbwbfDsP6tbROFZqkP3i5HpQAOlYUsgAkuFVyjSUCgQ4DfqTrGw/exec",
-	  
-    data: {
-      "이름": "aa",
-      "이름1": "bbb"
-    },
-    success: function (response) {
- console.log(response)
-
-    },
-    error: function (request, status, error) {
-      
+    
+fetch("https://script.google.com/macros/s/AKfycbwbfDsP6tbROFZqkP3i5HpQAOlYUsgAkuFVyjSUCgQ4DfqTrGw/exec", {
+    method: 'POST',
+    data: data,
+    mode: 'cors',
+    credentials: 'include', // include, *same-origin, omit
+    redirect: 'follow',
+    headers: {
+        'Content-Type': 'text/plain;charset=utf-8',
     }
-  });    
-})
+}).then(response => {
+    console.log("success:", response);
+});
 	</script>
 </body>
 </html>
