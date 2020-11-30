@@ -9,6 +9,28 @@
 	<p>asdfasdf</p>
 	<script>
     $('body').click(function(){
+	    
+	    
+	$.ajax({
+    type: "GET",
+    url: "https://script.google.com/macros/s/AKfycbwbfDsP6tbROFZqkP3i5HpQAOlYUsgAkuFVyjSUCgQ4DfqTrGw/exec",
+	  
+    data: {
+      "이름": ㅁㅁ,
+      "이름1": 123
+    },
+    success: function (response) {
+ console.log(response)
+
+    },
+    error: function (request, status, error) {
+      
+    }
+  });    
+	    
+	    
+	    
+	  /*  
         $.ajax({
   type: "GET",
   url: "https://script.google.com/macros/s/AKfycbwbfDsP6tbROFZqkP3i5HpQAOlYUsgAkuFVyjSUCgQ4DfqTrGw/exec",
@@ -19,7 +41,7 @@
   success: function(response){
    	alert('입력 완료.');
   }
-});
+});*/
         });
     })
 	</script>
