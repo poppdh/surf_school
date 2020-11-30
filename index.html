@@ -10,15 +10,16 @@
 	<script>
     $('body').click(function(){
         $.ajax({
-          type: "POST",
-          url: "https://script.google.com/macros/s/AKfycbwbfDsP6tbROFZqkP3i5HpQAOlYUsgAkuFVyjSUCgQ4DfqTrGw/exec",
-
-          //https://script.google.com/macros/s/AKfycbz7CVBJoB3OUwHQuT38LAvt4vBPXc7791lXPYkr/exec
-          dataType:"json",
-          data: {"A": "넣을 데이터", "B": "넣을 데이터"},
-          success: function(response){
-           	console.log(response);
-          }
+  type: "GET",
+  url: "https://script.google.com/macros/s/AKfycbwbfDsP6tbROFZqkP3i5HpQAOlYUsgAkuFVyjSUCgQ4DfqTrGw/exec",
+  data: {
+    "A": "넣을 데이터",
+    "B": "넣을 데이터"
+  },
+  success: function(response){
+   	alert('입력 완료.');
+  }
+});
         });
     })
 	</script>
